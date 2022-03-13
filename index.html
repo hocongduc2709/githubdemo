@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>luyện JS</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./styleIndex.css">
+  </head>
+  <body class="container">
+
+    <hr>
+
+    <!-- ví dụ phim  -->
+    <div>
+        <span>Tên phim: </span><input type="text" id="txtTenPhim">
+        <br>
+        <span>Số vé người lớn đã bán: </span><input type="text" id="txtVeNgLonDaBan">
+        <br>
+        <span>Số vé trẻ em đã bán: </span><input type="text" id="txtVeTreEmDaBan" >
+        <br>
+        <span>Giá vé người lớn: </span><input type="text" id="txtGiaVeNgLon">
+        <br>
+        <span>Giá vé trẻ em: </span><input type="text" id="txtGiaVeTreEm" >
+        <br>
+        <span>Trích % từ thiện: </span><input type="text" id="txtTrichTuThien">
+        <br>
+        <button id="btnTongKet" class="btn btn-success">Tổng kết</button>
+        <br>
+        <div id="thongBaoTongKet" class="demoAddClassCSS"></div>
+    </div>
+
+    <hr>
+
+    <!-- ví dụ bật tắt bóng đèn  -->
+    <div>
+        <button id="btnTurnOff" class="btn btn-light">TURN OFF</button>
+        <img id="imgLightBub" src="./images/pic_bulboff.gif" alt="">
+        <button id="btnTurnOn" class="btn btn-warning">TURN ON</button>
+        <br>
+        <button id="btnDisableButtonOn" class="btn btn-danger">DISABLE BUTTON TURN ON</button>
+        <button id="btnEnableButtonOn" class="btn btn-info">ENABLE BUTTON TURN ON</button>
+    </div>
+
+    <hr>
+
+    <!-- ví dụ form đăng nhập  -->
+    <div style="padding:100px">
+        <h1>VÍ DỤ FORM ĐĂNG NHẬP</h1>
+        <div class=row>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        ĐĂNG NHẬP
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                          <label for="">Tài khoản:</label>
+                          <input type="text" class="form-control" id="txtTaiKhoan" placeholder="Nhập tài khoản">
+                        </div>
+                        <div class="form-group">
+                          <label for="">Mật khẩu: </label>
+                          <input type="password" class="form-control" id="txtMatKhau" placeholder="Nhập mật khẩu">
+                        </div>
+                        <button id="btnDangNhap" class="btn btn-success">ĐĂNG NHẬP</button>
+                    </div>
+                    <div class="card-footer text-muted" id="thongBaoDangNhap">                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- ví dụ tính tiền tip  -->
+    <div style="padding:100px">
+        <h1>VÍ DỤ TÍNH TIỀN TIP</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        TÍNH TIỀN TIP
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                          <label for="">Tổng tiền thanh toán:</label><br/>
+                          <input type="text" class="form-control" id="txtTongTienThanhToan"> 
+                        </div>
+                        <div class="form-group">
+                            <label for="slChonTip">Bạn muốn Tip bao nhiêu?</label>
+                            <select class="form-control" id="slChonTip">
+                              <option value="30">30% - Tuyệt</option>
+                              <option value="20">20% - Tốt</option>
+                              <option value="15">15% - Tạm ổn</option>
+                              <option value="10">10% - Tồi</option>
+                              <option value="5">5% - Thật tệ</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Muốn share bao nhiêu người:</label><br/>
+                            <input type="text" class="form-control" id="txtSoNguoiShare">
+                            <br/>  
+                        </div>
+                        <button id="btnTinhTienTip" class="btn btn-success">TÍNH NÀO</button>
+                    </div>
+                    <div class="card-footer text-muted" id="thongBaoTienTip">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

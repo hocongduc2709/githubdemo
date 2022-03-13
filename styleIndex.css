@@ -1,0 +1,20 @@
+.styleThongBaoTongKet
+{
+    background-color: red;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.demoAddClassCSS
+{
+    font-weight: bold;
+}
+
+/* VÍ DỤ FORM ĐĂNG NHẬP  */
+
+.thong__bao__dang__nhap
+{
+    background-color: aqua;
+    color:black;
+}
