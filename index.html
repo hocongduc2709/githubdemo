@@ -16,22 +16,47 @@
     <hr>
 
     <!-- ví dụ phim  -->
-    <div>
-        <span>Tên phim: </span><input type="text" id="txtTenPhim">
-        <br>
-        <span>Số vé người lớn đã bán: </span><input type="text" id="txtVeNgLonDaBan">
-        <br>
-        <span>Số vé trẻ em đã bán: </span><input type="text" id="txtVeTreEmDaBan" >
-        <br>
-        <span>Giá vé người lớn: </span><input type="text" id="txtGiaVeNgLon">
-        <br>
-        <span>Giá vé trẻ em: </span><input type="text" id="txtGiaVeTreEm" >
-        <br>
-        <span>Trích % từ thiện: </span><input type="text" id="txtTrichTuThien">
-        <br>
-        <button id="btnTongKet" class="btn btn-success">Tổng kết</button>
-        <br>
-        <div id="thongBaoTongKet" class="demoAddClassCSS"></div>
+    <div style="padding:100px">
+        <div class=row>
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-header">
+                        BÁN VÉ PHIM
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="">Tên phim: </label>
+                            <input type="text" class="form-control" id="txtTenPhim">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Số vé người lớn đã bán: </label>
+                            <input type="text" class="form-control" id="txtVeNgLonDaBan">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Số vé trẻ em đã bán: </label>
+                            <input type="text" class="form-control" id="txtVeTreEmDaBan">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Giá vé người lớn: </label>
+                            <input type="text" class="form-control" id="txtGiaVeNgLon">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Giá vé trẻ em: </label>
+                            <input type="text" class="form-control" id="txtGiaVeTreEm">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Trích % từ thiện: </label>
+                            <input type="text" class="form-control" id="txtTrichTuThien">
+                        </div>
+                        <button id="btnTongKet" class="btn btn-success">Tổng kết</button>
+                        <br>
+                    </div>
+                    <div id="thongBaoTongKet" class="demoAddClassCSS card-footer text-muted"></div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
     <hr>
@@ -117,6 +142,9 @@
     </div>
 
     <hr>
+
+    <div id="divContent" style="padding:100px"></div>
+    <button id="btnTaoTheP" class="btn btn-info">Tạo thẻ p</button>
 
       
     <!-- Optional JavaScript -->

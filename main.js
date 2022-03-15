@@ -30,12 +30,20 @@
  
      var tongVeDaBan = veNgLonDaBan + veTreEmDaBan;
      var doanhThu = (veNgLonDaBan * giaVeNgLon) + (veTreEmDaBan * giaVeTreEm);
-     var tuThien = doanhThu / trichTuThien;
+     var tuThien = doanhThu * (trichTuThien/100);
      var tongDoanhThu = doanhThu - tuThien;
  
-     var thongBaoTK = "Tên phim: " + tenPhim + " Số vé đã bán: "+tongVeDaBan+" Doanh thu: "+doanhThu
-         +" Trích % từ thiện: "+ trichTuThien+"%"+" Tổng tiền trích từ thiện: "+tuThien+" Tổng doanh thu: "+tongDoanhThu;
- 
+    //FORMAT tiền VND
+    var currentFormat = new Intl.NumberFormat("vn-VN");
+
+     var thongBaoTK = "<div class='alert alert-success' style='border:1px solid yellow; border-radius:10px'>";
+    thongBaoTK += "<p>Tên phim: " + tenPhim + "</p>";
+    thongBaoTK += "<p> Số vé đã bán: "+tongVeDaBan+"</p>";
+    thongBaoTK += "<p> Doanh thu: "+ currentFormat.format(doanhThu) +" VND</p>";
+    thongBaoTK += "<p> Trích % từ thiện: "+ trichTuThien+"%"+"</p>";
+    thongBaoTK += "<p> Tổng tiền trích từ thiện: "+currentFormat.format(tuThien)+" VND</p>";
+    thongBaoTK += "<p> Tổng doanh thu: "+ currentFormat.format(tongDoanhThu)+" VND</p>";
+    thongBaoTK += "</div>";
      document.getElementById("thongBaoTongKet").innerHTML = thongBaoTK;
  
      //style inline thẻ div thongBaoTongKet
@@ -99,7 +107,24 @@ document.getElementById("btnTinhTienTip").onclick = function()
 
     var tienTipMoiNguoi = (tongTienThanhToan * (chonTip/100)) / soNguoiShare; 
 
-    var kqTip = "TIP AMONUT <br/>"+tienTipMoiNguoi+"$ <br/>"+"mỗi người"
+    var kqTip = "<div class='alert alert-success'>TIP AMONUT <br/>"+tienTipMoiNguoi+"$ <br/>"+"mỗi người</div>"
 
     document.getElementById("thongBaoTienTip").innerHTML = kqTip;
+}
+
+//------------------------------CHÈN THẺ------------------------------
+
+var taoTheP = document.getElementById("btnTaoTheP").onclick = function()
+{
+    // CÁCH 1: TẠO THẺ BẰNG CHUỖI (chỉ tạo 1 thẻ p duuy nhất)
+    // var tagP = "<p>ALO</p>";
+    // document.getElementById("divContent").innerHTML = tagP;
+
+    // CÁCH 2: TẠO THẺ BẰNG DOM (tạo dc vô hạn thẻ p)
+    document.getElementById("divContent").innerHTML = ""; //CLEAR THẺ DIV NẾU KO MUỐN XUẤT HIỆN NHIỀU THẺ P
+    //tạo thẻ p
+    var tagP = document.createElement("p");
+    //gán nội dung cho thẻ p
+    tagP.innerHTML = "Hello everyone!"
+    document.getElementById("divContent").appendChild(tagP);
 }
